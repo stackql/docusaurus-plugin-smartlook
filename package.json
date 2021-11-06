@@ -1,0 +1,24 @@
+{
+    "name": "docusaurus-plugin-smartlook",
+    "version": "1.0.0",
+    "description": "A plugin which adds your Smartlook tracking code to your docusaurus site.",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/infraql/docusaurus-plugin-smartlook"
+    },
+    "keywords": [
+      "docusaurus",
+      "hubspot",
+      "plugin"
+    ],
+    "author": "Jeffrey Aven @ InfraQL Technologies",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/infraql/docusaurus-plugin-smartlook/issues"
+    },
+    "homepage": "https://github.com/infraql/docusaurus-plugin-smartlook#readme"
+  }
