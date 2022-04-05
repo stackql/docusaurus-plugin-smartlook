@@ -19,6 +19,14 @@ module.exports = function (context) {
         'Please ensure this is not a mistake.',
     );
   }
+  
+  const {useBetaNextGen} = smartlook;
+
+  let smartLookUri = "https://rec.smartlook.com/recorder.js";
+  
+  if (useBetaNextGen) {
+    smartLookUri = "https://web-sdk.smartlook.com/recorder.js";
+  }
 
   const isProd = process.env.NODE_ENV === 'production';
 
@@ -37,7 +45,7 @@ module.exports = function (context) {
             window.smartlook||(function(d) {
               var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
               var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-              c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+              c.charset='utf-8';c.src='${smartLookUri}';h.appendChild(c);
               })(document);
               smartlook('init', '${projectKey}');
             `,
